@@ -3,12 +3,21 @@ import PropTypes from "prop-types";
 
 const Todo = ({ onClick, completed, text }) => (
     <li
-        onClick={onClick}
         style={{
-        textDecoration: completed ? "line-through" : "none"
+            textDecoration: completed ? "line-through" : "none"
         }}
+        className="todo"
     >
-        {text}
+        <div className="tile tile-centered">
+        <div className="tile-content">
+            <h3 className="title-title">- {text}</h3>
+        </div>
+        <div className="tile-action">
+            <span className="btn btn-sm" onClick={onClick}>
+                <i className={completed ? "icon icon-cross": "icon icon-check"}></i>
+            </span>
+        </div>
+        </div>
     </li>
 );
 
