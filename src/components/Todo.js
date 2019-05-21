@@ -13,7 +13,7 @@ const Todo = ({ onClick, completed, text }) => (
             <h3 className="title-title">- {text}</h3>
         </div>
         <div className="tile-action">
-            <span className="btn btn-sm" onClick={onClick}>
+            <span className={`btn btn-sm" ${completed ? "btn-error" : "btn-success"}`} onClick={onClick}>
                 <i className={completed ? "icon icon-cross": "icon icon-check"}></i>
             </span>
         </div>
